@@ -8,37 +8,93 @@ build_property.PlatformNeutralAssembly =
 build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property.RootNamespace = Web.RTSU.Task
 build_property.RootNamespace = Web.RTSU.Task
-build_property.ProjectDir = C:\Users\Tajiev Olimjon\Desktop\Буруллко\Web.RTSU.Task\
+build_property.ProjectDir = C:\Users\Developer\source\repos\TaskRTSU\Web.RTSU.Task\
 build_property.RazorLangVersion = 6.0
 build_property.SupportLocalizedComponentNames = 
 build_property.GenerateRazorMetadataSourceChecksumAttributes = 
-build_property.MSBuildProjectDirectory = C:\Users\Tajiev Olimjon\Desktop\Буруллко\Web.RTSU.Task
+build_property.MSBuildProjectDirectory = C:\Users\Developer\source\repos\TaskRTSU\Web.RTSU.Task
 build_property._RazorSourceGeneratorDebug = 
 
-[C:/Users/Tajiev Olimjon/Desktop/Буруллко/Web.RTSU.Task/Views/Home/Index.cshtml]
+[C:/Users/Developer/source/repos/TaskRTSU/Web.RTSU.Task/Areas/Admin/Views/Shared/Error.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcU2hhcmVkXEVycm9yLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Developer/source/repos/TaskRTSU/Web.RTSU.Task/Areas/Admin/Views/Shared/_ValidationScriptsPartial.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcU2hhcmVkXF9WYWxpZGF0aW9uU2NyaXB0c1BhcnRpYWwuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Developer/source/repos/TaskRTSU/Web.RTSU.Task/Areas/Admin/Views/_ViewImports.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcX1ZpZXdJbXBvcnRzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Developer/source/repos/TaskRTSU/Web.RTSU.Task/Areas/Admin/Views/_ViewStart.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcX1ZpZXdTdGFydC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Developer/source/repos/TaskRTSU/Web.RTSU.Task/Views/Department/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRGVwYXJ0bWVudFxDcmVhdGUuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Developer/source/repos/TaskRTSU/Web.RTSU.Task/Views/Department/Delete.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRGVwYXJ0bWVudFxEZWxldGUuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Developer/source/repos/TaskRTSU/Web.RTSU.Task/Views/Department/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRGVwYXJ0bWVudFxFZGl0LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Developer/source/repos/TaskRTSU/Web.RTSU.Task/Views/Department/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRGVwYXJ0bWVudFxJbmRleC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Developer/source/repos/TaskRTSU/Web.RTSU.Task/Views/Employee/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRW1wbG95ZWVcQ3JlYXRlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Developer/source/repos/TaskRTSU/Web.RTSU.Task/Views/Employee/Delete.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRW1wbG95ZWVcRGVsZXRlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Developer/source/repos/TaskRTSU/Web.RTSU.Task/Views/Employee/Details.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRW1wbG95ZWVcRGV0YWlscy5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Developer/source/repos/TaskRTSU/Web.RTSU.Task/Views/Employee/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRW1wbG95ZWVcRWRpdC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Developer/source/repos/TaskRTSU/Web.RTSU.Task/Views/Employee/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRW1wbG95ZWVcSW5kZXguY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Developer/source/repos/TaskRTSU/Web.RTSU.Task/Views/Home/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Tajiev Olimjon/Desktop/Буруллко/Web.RTSU.Task/Views/Home/Privacy.cshtml]
+[C:/Users/Developer/source/repos/TaskRTSU/Web.RTSU.Task/Views/Home/Privacy.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxQcml2YWN5LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Tajiev Olimjon/Desktop/Буруллко/Web.RTSU.Task/Views/Shared/Error.cshtml]
+[C:/Users/Developer/source/repos/TaskRTSU/Web.RTSU.Task/Views/Shared/Error.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXEVycm9yLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Tajiev Olimjon/Desktop/Буруллко/Web.RTSU.Task/Views/Shared/_ValidationScriptsPartial.cshtml]
+[C:/Users/Developer/source/repos/TaskRTSU/Web.RTSU.Task/Views/Shared/_ValidationScriptsPartial.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9WYWxpZGF0aW9uU2NyaXB0c1BhcnRpYWwuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Tajiev Olimjon/Desktop/Буруллко/Web.RTSU.Task/Views/_ViewImports.cshtml]
+[C:/Users/Developer/source/repos/TaskRTSU/Web.RTSU.Task/Views/_ViewImports.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdJbXBvcnRzLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Tajiev Olimjon/Desktop/Буруллко/Web.RTSU.Task/Views/_ViewStart.cshtml]
+[C:/Users/Developer/source/repos/TaskRTSU/Web.RTSU.Task/Views/_ViewStart.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdTdGFydC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Tajiev Olimjon/Desktop/Буруллко/Web.RTSU.Task/Views/Shared/_Layout.cshtml]
+[C:/Users/Developer/source/repos/TaskRTSU/Web.RTSU.Task/Areas/Admin/Views/Shared/_Layout.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcU2hhcmVkXF9MYXlvdXQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = b-m6rszejuw7
+
+[C:/Users/Developer/source/repos/TaskRTSU/Web.RTSU.Task/Views/Shared/_Layout.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9MYXlvdXQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = b-dl55cgkeva

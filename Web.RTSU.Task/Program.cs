@@ -1,5 +1,8 @@
+using AutoMapper;
 using Microsoft.EntityFrameworkCore;
 using Persistence.Data;
+using Services.MapperServices;
+using Web.RTSU.Task.ExtensionMethods;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -7,7 +10,14 @@ var builder = WebApplication.CreateBuilder(args);
 builder.Services.AddControllersWithViews();
 
 string connection = builder.Configuration.GetConnectionString("DefaultCoonection");
+
 builder.Services.AddDbContext<ApplicationContext>(options => options.UseNpgsql(connection));
+
+builder.Services.AddServicesToTheContainer();//Add services to the container.
+
+builder.Services.AddAutoMapper(typeof(MapService));
+
+builder.AddSerelogServices(); // add serelog settings to container
 
 var app = builder.Build();
 
@@ -26,8 +36,6 @@ app.UseRouting();
 
 app.UseAuthorization();
 
-app.MapControllerRoute(
-    name: "default",
-    pattern: "{controller=Home}/{action=Index}/{id?}");
+app.AddMapControllerRoute();
 
 app.Run();

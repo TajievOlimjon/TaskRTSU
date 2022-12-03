@@ -15,10 +15,9 @@ namespace Domain.Entities
             MaxLength(85,ErrorMessage = "Число символов должен быть минимум 85")]
         public string DepartmentName { get; set; }
         public string Description { get; set; }
+
         [Required(ErrorMessage ="Введите адрес ")]
-        public int AddressId { get; set; }
-        public Address Address { get; set; }
+        public string Address { get; set; }
         public virtual List<Employee> Employees { get; set; }
-        public List<Document> Documents { get; set; }
     }
 }

@@ -1,0 +1,103 @@
+﻿@model EmployeeDto
+
+<div class="row">
+    <h3>Добавления данные</h3>
+    <form asp-action="Create" asp-controller="Employee" method="post" class="form-horizontal" asp-antiforgery="true" enctype="multipart/form-data">
+        
+        <div class="form-group">
+            <label asp-for="FirstName">Имя</label>
+            <div class="col-md-5">
+                <input asp-for="FirstName" class="form-control" />
+                <span asp-validation-for="FirstName" class="text-danger"></span>
+            </div>
+        </div>
+        <div class="form-group">
+            <label asp-for="LastName">Фамилия</label>
+            <div class="col-md-5">
+                <input asp-for="LastName" class="form-control" />
+                <span asp-validation-for="LastName" class="text-danger"></span>
+            </div>
+        </div>
+         <div class="form-group">
+            <label asp-for="Middle">Отчество</label>
+            <div class="col-md-5">
+                <input asp-for="Middle" class="form-control" />
+                <span asp-validation-for="Middle" class="text-danger"></span>
+            </div>
+        </div>
+         <div class="form-group">
+            <label asp-for="Age">Возраст</label>
+            <div class="col-md-5">
+                <input asp-for="Age" class="form-control" />
+                <span asp-validation-for="Age" class="text-danger"></span>
+            </div>
+        </div>
+        <div class="form-group">
+            <label asp-for="Email">Э-почта</label>
+            <div class="col-md-5">
+                <input asp-for="Email" class="form-control" />
+                <span asp-validation-for="Email" class="text-danger"></span>
+            </div>
+        </div>
+        <div class="form-group">
+            <label asp-for="PhoneNumber">Телефон</label>
+            <div class="col-md-5">
+                <input asp-for="PhoneNumber" class="form-control" />
+                <span asp-validation-for="PhoneNumber" class="text-danger"></span>
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label asp-for="BitrthDate">Дата рождения</label>
+            <div class="col-md-5">
+                <input asp-for="BitrthDate" class="form-control" type="datetime" />
+                <span asp-validation-for="BitrthDate" class="text-danger"></span>
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label asp-for="Gender">Пол</label>
+            <div class="col-md-5">
+                <input asp-for="Gender" class="form-control" />
+                <span asp-validation-for="Gender" class="text-danger"></span>
+            </div>
+        </div>
+        <div class="form-group">
+            <label asp-for="Image">Фото сотрудника</label>
+            <div class="col-md-5">
+                <input asp-for="Image" class="form-control" />
+                <span asp-validation-for="Image" class="text-danger"></span>
+            </div>
+        </div>
+
+         <div class="form-group">
+            <label asp-for="Address">Адресс</label>
+            <div class="col-md-5">
+                <input asp-for="Address" class="form-control" />
+                <span asp-validation-for="Address" class="text-danger"></span>
+            </div>
+        </div>
+        <div class="form-group">
+            <label asp-for="Position">Должность</label>
+            <div class="col-md-5">
+                <input type="text" asp-for="Position" class="form-control" />
+                <span asp-validation-for="Position" class="text-danger"></span>
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label asp-for="DepartmentId">Отдел в котором работает сотрудник</label>
+            <select class="form-control" name="DepartmentId">
+                @foreach (var x in ViewBag.Departments)
+                {
+                    <option value="@x.Id">@x.DepartmentName</option>
+                }
+            </select>
+            <span asp-validation-for="DepartmentId"></span>
+        </div>
+
+        <input class="btn btn-success" type="submit" value="Добавить" />
+
+        <a asp-action="Index" asp-controller="Employee" class="btn btn-secondary">Отменить</a>
+    </form>
+</div>

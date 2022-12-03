@@ -22,24 +22,6 @@ namespace Persistence.Migrations
 
             NpgsqlModelBuilderExtensions.UseIdentityByDefaultColumns(modelBuilder);
 
-            modelBuilder.Entity("Domain.Entities.Address", b =>
-                {
-                    b.Property<int>("Id")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("integer");
-
-                    NpgsqlPropertyBuilderExtensions.UseIdentityByDefaultColumn(b.Property<int>("Id"));
-
-                    b.Property<string>("Name")
-                        .IsRequired()
-                        .HasMaxLength(100)
-                        .HasColumnType("character varying(100)");
-
-                    b.HasKey("Id");
-
-                    b.ToTable("Addresses");
-                });
-
             modelBuilder.Entity("Domain.Entities.Agreement", b =>
                 {
                     b.Property<int>("Id")
@@ -54,15 +36,15 @@ namespace Persistence.Migrations
                     b.Property<bool>("AgreementResult")
                         .HasColumnType("boolean");
 
-                    b.Property<DateTime>("DateOtprovkaNaSoglosovaniya")
-                        .HasColumnType("timestamp with time zone");
-
-                    b.Property<DateTime>("DateSoglosovaniya")
-                        .HasColumnType("timestamp with time zone");
-
-                    b.Property<string>("Description")
+                    b.Property<string>("Commment")
                         .IsRequired()
                         .HasColumnType("text");
+
+                    b.Property<DateTime>("DateAgreementDocument")
+                        .HasColumnType("timestamp with time zone");
+
+                    b.Property<DateTime>("DateOfSendingAgreement")
+                        .HasColumnType("timestamp with time zone");
 
                     b.Property<int>("DocumentId")
                         .HasColumnType("integer");
@@ -71,6 +53,8 @@ namespace Persistence.Migrations
                         .HasColumnType("integer");
 
                     b.HasKey("Id");
+
+                    b.HasIndex("AgreementEmployeeId");
 
                     b.HasIndex("DocumentId");
 
@@ -87,8 +71,9 @@ namespace Persistence.Migrations
 
                     NpgsqlPropertyBuilderExtensions.UseIdentityByDefaultColumn(b.Property<int>("Id"));
 
-                    b.Property<int>("AddressId")
-                        .HasColumnType("integer");
+                    b.Property<string>("Address")
+                        .IsRequired()
+                        .HasColumnType("text");
 
                     b.Property<string>("DepartmentName")
                         .IsRequired()
@@ -101,8 +86,6 @@ namespace Persistence.Migrations
 
                     b.HasKey("Id");
 
-                    b.HasIndex("AddressId");
-
                     b.ToTable("Departments");
                 });
 
@@ -114,11 +97,12 @@ namespace Persistence.Migrations
 
                     NpgsqlPropertyBuilderExtensions.UseIdentityByDefaultColumn(b.Property<int>("Id"));
 
+                    b.Property<string>("Correspondent")
+                        .IsRequired()
+                        .HasColumnType("text");
+
                     b.Property<DateTime>("DateCreated")
                         .HasColumnType("timestamp with time zone");
-
-                    b.Property<int>("DepartmentId")
-                        .HasColumnType("integer");
 
                     b.Property<string>("Description")
                         .IsRequired()
@@ -130,13 +114,18 @@ namespace Persistence.Migrations
                     b.Property<int>("NomberDocument")
                         .HasColumnType("integer");
 
+                    b.Property<int>("NumberCorrespondent")
+                        .HasColumnType("integer");
+
+                    b.Property<string>("PerformerPhoneNumber")
+                        .IsRequired()
+                        .HasColumnType("text");
+
                     b.Property<string>("Title")
                         .IsRequired()
                         .HasColumnType("text");
 
                     b.HasKey("Id");
-
-                    b.HasIndex("DepartmentId");
 
                     b.ToTable("Documents");
                 });
@@ -149,9 +138,9 @@ namespace Persistence.Migrations
 
                     NpgsqlPropertyBuilderExtensions.UseIdentityByDefaultColumn(b.Property<int>("Id"));
 
-                    b.Property<int>("AddressId")
-                        .HasMaxLength(75)
-                        .HasColumnType("integer");
+                    b.Property<string>("Address")
+                        .IsRequired()
+                        .HasColumnType("text");
 
                     b.Property<int>("Age")
                         .HasColumnType("integer");
@@ -160,7 +149,6 @@ namespace Persistence.Migrations
                         .HasColumnType("timestamp with time zone");
 
                     b.Property<int>("DepartmentId")
-                        .HasMaxLength(75)
                         .HasColumnType("integer");
 
                     b.Property<string>("Email")
@@ -177,35 +165,30 @@ namespace Persistence.Migrations
 
                     b.Property<string>("Image")
                         .IsRequired()
-                        .HasMaxLength(75)
-                        .HasColumnType("character varying(75)");
+                        .HasColumnType("text");
 
                     b.Property<string>("LastName")
                         .IsRequired()
                         .HasMaxLength(75)
                         .HasColumnType("character varying(75)");
 
+                    b.Property<string>("Middle")
+                        .IsRequired()
+                        .HasMaxLength(75)
+                        .HasColumnType("character varying(75)");
+
                     b.Property<string>("PhoneNumber")
                         .IsRequired()
-                        .HasMaxLength(75)
-                        .HasColumnType("character varying(75)");
+                        .HasMaxLength(13)
+                        .HasColumnType("character varying(13)");
 
-                    b.Property<int>("PositionId")
-                        .HasMaxLength(75)
-                        .HasColumnType("integer");
-
-                    b.Property<string>("Potronymic")
+                    b.Property<string>("Position")
                         .IsRequired()
-                        .HasMaxLength(75)
-                        .HasColumnType("character varying(75)");
+                        .HasColumnType("text");
 
                     b.HasKey("Id");
 
-                    b.HasIndex("AddressId");
-
                     b.HasIndex("DepartmentId");
-
-                    b.HasIndex("PositionId");
 
                     b.ToTable("Employees");
                 });
@@ -218,13 +201,10 @@ namespace Persistence.Migrations
 
                     NpgsqlPropertyBuilderExtensions.UseIdentityByDefaultColumn(b.Property<int>("Id"));
 
-                    b.Property<int>("CorrespondentId")
-                        .HasColumnType("integer");
-
-                    b.Property<DateTime>("DateExecution")
+                    b.Property<DateTimeOffset>("DateExecution")
                         .HasColumnType("timestamp with time zone");
 
-                    b.Property<DateTime>("DateOrderDocument")
+                    b.Property<DateTimeOffset>("DateOrderDocument")
                         .HasColumnType("timestamp with time zone");
 
                     b.Property<string>("Description")
@@ -234,33 +214,13 @@ namespace Persistence.Migrations
                     b.Property<int>("DocumentId")
                         .HasColumnType("integer");
 
-                    b.Property<int>("NumberCorrespondent")
+                    b.Property<int>("EmployeeId")
                         .HasColumnType("integer");
 
-                    b.Property<DateTime>("PerformanceDate")
+                    b.Property<DateTimeOffset>("PerformanceDate")
                         .HasColumnType("timestamp with time zone");
 
-                    b.Property<string>("PerformerEmail")
-                        .IsRequired()
-                        .HasColumnType("text");
-
-                    b.Property<string>("PerformerFirstName")
-                        .IsRequired()
-                        .HasColumnType("text");
-
-                    b.Property<string>("PerformerLastName")
-                        .IsRequired()
-                        .HasColumnType("text");
-
-                    b.Property<string>("PerformerPhoneNumber")
-                        .IsRequired()
-                        .HasColumnType("text");
-
-                    b.Property<string>("PerformerPotronymic")
-                        .IsRequired()
-                        .HasColumnType("text");
-
-                    b.Property<int>("PositionId")
+                    b.Property<int>("PerformerType")
                         .HasColumnType("integer");
 
                     b.Property<string>("Title")
@@ -269,161 +229,73 @@ namespace Persistence.Migrations
 
                     b.HasKey("Id");
 
-                    b.HasIndex("CorrespondentId");
-
                     b.HasIndex("DocumentId");
 
-                    b.HasIndex("PositionId");
+                    b.HasIndex("EmployeeId");
 
                     b.ToTable("Performers");
                 });
 
-            modelBuilder.Entity("Domain.Entities.Position", b =>
-                {
-                    b.Property<int>("Id")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("integer");
-
-                    NpgsqlPropertyBuilderExtensions.UseIdentityByDefaultColumn(b.Property<int>("Id"));
-
-                    b.Property<string>("Description")
-                        .IsRequired()
-                        .HasColumnType("text");
-
-                    b.Property<string>("Name")
-                        .IsRequired()
-                        .HasMaxLength(50)
-                        .HasColumnType("character varying(50)");
-
-                    b.HasKey("Id");
-
-                    b.ToTable("Positions");
-                });
-
             modelBuilder.Entity("Domain.Entities.Agreement", b =>
                 {
+                    b.HasOne("Domain.Entities.Employee", "AgreementEmployee")
+                        .WithMany()
+                        .HasForeignKey("AgreementEmployeeId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
                     b.HasOne("Domain.Entities.Document", "Document")
-                        .WithMany("Agreements")
+                        .WithMany()
                         .HasForeignKey("DocumentId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
                     b.HasOne("Domain.Entities.Employee", "PerformerEmployee")
-                        .WithMany("Agreements")
+                        .WithMany()
                         .HasForeignKey("PerformerEmployeeId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
+
+                    b.Navigation("AgreementEmployee");
 
                     b.Navigation("Document");
 
                     b.Navigation("PerformerEmployee");
                 });
 
-            modelBuilder.Entity("Domain.Entities.Department", b =>
-                {
-                    b.HasOne("Domain.Entities.Address", "Address")
-                        .WithMany("Departments")
-                        .HasForeignKey("AddressId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
-
-                    b.Navigation("Address");
-                });
-
-            modelBuilder.Entity("Domain.Entities.Document", b =>
-                {
-                    b.HasOne("Domain.Entities.Department", "Department")
-                        .WithMany("Documents")
-                        .HasForeignKey("DepartmentId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
-
-                    b.Navigation("Department");
-                });
-
             modelBuilder.Entity("Domain.Entities.Employee", b =>
                 {
-                    b.HasOne("Domain.Entities.Address", "Address")
-                        .WithMany("Employees")
-                        .HasForeignKey("AddressId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
-
                     b.HasOne("Domain.Entities.Department", "Department")
                         .WithMany("Employees")
                         .HasForeignKey("DepartmentId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
-                    b.HasOne("Domain.Entities.Position", "Position")
-                        .WithMany("Employees")
-                        .HasForeignKey("PositionId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
-
-                    b.Navigation("Address");
-
                     b.Navigation("Department");
-
-                    b.Navigation("Position");
                 });
 
             modelBuilder.Entity("Domain.Entities.Performer", b =>
                 {
-                    b.HasOne("Domain.Entities.Employee", "Correspondent")
-                        .WithMany()
-                        .HasForeignKey("CorrespondentId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
-
                     b.HasOne("Domain.Entities.Document", "Document")
                         .WithMany()
                         .HasForeignKey("DocumentId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
-                    b.HasOne("Domain.Entities.Position", "Position")
-                        .WithMany("Performers")
-                        .HasForeignKey("PositionId")
+                    b.HasOne("Domain.Entities.Employee", "Employee")
+                        .WithMany()
+                        .HasForeignKey("EmployeeId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
-                    b.Navigation("Correspondent");
-
                     b.Navigation("Document");
 
-                    b.Navigation("Position");
-                });
-
-            modelBuilder.Entity("Domain.Entities.Address", b =>
-                {
-                    b.Navigation("Departments");
-
-                    b.Navigation("Employees");
+                    b.Navigation("Employee");
                 });
 
             modelBuilder.Entity("Domain.Entities.Department", b =>
                 {
-                    b.Navigation("Documents");
-
                     b.Navigation("Employees");
-                });
-
-            modelBuilder.Entity("Domain.Entities.Document", b =>
-                {
-                    b.Navigation("Agreements");
-                });
-
-            modelBuilder.Entity("Domain.Entities.Employee", b =>
-                {
-                    b.Navigation("Agreements");
-                });
-
-            modelBuilder.Entity("Domain.Entities.Position", b =>
-                {
-                    b.Navigation("Employees");
-
-                    b.Navigation("Performers");
                 });
 #pragma warning restore 612, 618
         }

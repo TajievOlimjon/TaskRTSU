@@ -1,0 +1,29 @@
+﻿@using Domain.EntitiesDto.EmployeeDTOs
+@model GetEmployeeDto
+
+
+
+<h1>Сотрудник</h1>
+
+<div class="row mt-5 mb-2">
+   
+        
+           <div class="col-lg-4">
+           <img class="img-thumbnail" src="~/Images/@Model.Image" alt="Person"/>
+                <h2>@Model.FirstName @Model.LastName @Model.Middle</h2>
+                <h2>@Model.Age</h2>
+                <h2>@Model.Email</h2>
+                <h2>@Model.PhoneNumber</h2>
+                <h2>@Model.BitrthDate.ToString("0:dd/MM/yy H:mm:ss zzz").</h2>
+                <h2>@Model.Gender</h2>
+                <h2>@Model.Address</h2>
+                <h2>@Model.DepartmentId</h2>
+                <h2>@Model.Position</h2>
+
+
+                <p><a class="btn btn-primary" asp-controller="Employee" asp-action="Index">Назад</a></p>
+
+            </div>
+        
+    
+</div>

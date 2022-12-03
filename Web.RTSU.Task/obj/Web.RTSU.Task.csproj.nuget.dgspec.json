@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Tajiev Olimjon\\Desktop\\Буруллко\\Web.RTSU.Task\\Web.RTSU.Task.csproj": {}
+    "C:\\Users\\Developer\\source\\repos\\TaskRTSU\\Web.RTSU.Task\\Web.RTSU.Task.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Tajiev Olimjon\\Desktop\\Буруллко\\Domain\\Domain.csproj": {
+    "C:\\Users\\Developer\\source\\repos\\TaskRTSU\\Domain\\Domain.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Tajiev Olimjon\\Desktop\\Буруллко\\Domain\\Domain.csproj",
+        "projectUniqueName": "C:\\Users\\Developer\\source\\repos\\TaskRTSU\\Domain\\Domain.csproj",
         "projectName": "Domain",
-        "projectPath": "C:\\Users\\Tajiev Olimjon\\Desktop\\Буруллко\\Domain\\Domain.csproj",
-        "packagesPath": "C:\\Users\\Tajiev Olimjon\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Tajiev Olimjon\\Desktop\\Буруллко\\Domain\\obj\\",
+        "projectPath": "C:\\Users\\Developer\\source\\repos\\TaskRTSU\\Domain\\Domain.csproj",
+        "packagesPath": "C:\\Users\\Developer\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Developer\\source\\repos\\TaskRTSU\\Domain\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\Tajiev Olimjon\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Developer\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -39,6 +39,12 @@
       "frameworks": {
         "net6.0": {
           "targetAlias": "net6.0",
+          "dependencies": {
+            "Microsoft.AspNetCore.Http.Features": {
+              "target": "Package",
+              "version": "[5.0.17, )"
+            }
+          },
           "imports": [
             "net461",
             "net462",
@@ -55,21 +61,21 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.401\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.402\\RuntimeIdentifierGraph.json"
         }
       }
     },
-    "C:\\Users\\Tajiev Olimjon\\Desktop\\Буруллко\\Persistence\\Persistence.csproj": {
+    "C:\\Users\\Developer\\source\\repos\\TaskRTSU\\Persistence\\Persistence.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Tajiev Olimjon\\Desktop\\Буруллко\\Persistence\\Persistence.csproj",
+        "projectUniqueName": "C:\\Users\\Developer\\source\\repos\\TaskRTSU\\Persistence\\Persistence.csproj",
         "projectName": "Persistence",
-        "projectPath": "C:\\Users\\Tajiev Olimjon\\Desktop\\Буруллко\\Persistence\\Persistence.csproj",
-        "packagesPath": "C:\\Users\\Tajiev Olimjon\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Tajiev Olimjon\\Desktop\\Буруллко\\Persistence\\obj\\",
+        "projectPath": "C:\\Users\\Developer\\source\\repos\\TaskRTSU\\Persistence\\Persistence.csproj",
+        "packagesPath": "C:\\Users\\Developer\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Developer\\source\\repos\\TaskRTSU\\Persistence\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\Tajiev Olimjon\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Developer\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -83,8 +89,8 @@
           "net6.0": {
             "targetAlias": "net6.0",
             "projectReferences": {
-              "C:\\Users\\Tajiev Olimjon\\Desktop\\Буруллко\\Domain\\Domain.csproj": {
-                "projectPath": "C:\\Users\\Tajiev Olimjon\\Desktop\\Буруллко\\Domain\\Domain.csproj"
+              "C:\\Users\\Developer\\source\\repos\\TaskRTSU\\Domain\\Domain.csproj": {
+                "projectPath": "C:\\Users\\Developer\\source\\repos\\TaskRTSU\\Domain\\Domain.csproj"
               }
             }
           }
@@ -130,21 +136,21 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.401\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.402\\RuntimeIdentifierGraph.json"
         }
       }
     },
-    "C:\\Users\\Tajiev Olimjon\\Desktop\\Буруллко\\Services\\Services.csproj": {
+    "C:\\Users\\Developer\\source\\repos\\TaskRTSU\\Services\\Services.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Tajiev Olimjon\\Desktop\\Буруллко\\Services\\Services.csproj",
+        "projectUniqueName": "C:\\Users\\Developer\\source\\repos\\TaskRTSU\\Services\\Services.csproj",
         "projectName": "Services",
-        "projectPath": "C:\\Users\\Tajiev Olimjon\\Desktop\\Буруллко\\Services\\Services.csproj",
-        "packagesPath": "C:\\Users\\Tajiev Olimjon\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Tajiev Olimjon\\Desktop\\Буруллко\\Services\\obj\\",
+        "projectPath": "C:\\Users\\Developer\\source\\repos\\TaskRTSU\\Services\\Services.csproj",
+        "packagesPath": "C:\\Users\\Developer\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Developer\\source\\repos\\TaskRTSU\\Services\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\Tajiev Olimjon\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Developer\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -158,8 +164,8 @@
           "net6.0": {
             "targetAlias": "net6.0",
             "projectReferences": {
-              "C:\\Users\\Tajiev Olimjon\\Desktop\\Буруллко\\Persistence\\Persistence.csproj": {
-                "projectPath": "C:\\Users\\Tajiev Olimjon\\Desktop\\Буруллко\\Persistence\\Persistence.csproj"
+              "C:\\Users\\Developer\\source\\repos\\TaskRTSU\\Persistence\\Persistence.csproj": {
+                "projectPath": "C:\\Users\\Developer\\source\\repos\\TaskRTSU\\Persistence\\Persistence.csproj"
               }
             }
           }
@@ -173,6 +179,16 @@
       "frameworks": {
         "net6.0": {
           "targetAlias": "net6.0",
+          "dependencies": {
+            "AutoMapper.Extensions.Microsoft.DependencyInjection": {
+              "target": "Package",
+              "version": "[6.1.1, )"
+            },
+            "Serilog.AspNetCore": {
+              "target": "Package",
+              "version": "[6.0.1, )"
+            }
+          },
           "imports": [
             "net461",
             "net462",
@@ -189,21 +205,21 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.401\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.402\\RuntimeIdentifierGraph.json"
         }
       }
     },
-    "C:\\Users\\Tajiev Olimjon\\Desktop\\Буруллко\\Web.RTSU.Task\\Web.RTSU.Task.csproj": {
+    "C:\\Users\\Developer\\source\\repos\\TaskRTSU\\Web.RTSU.Task\\Web.RTSU.Task.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Tajiev Olimjon\\Desktop\\Буруллко\\Web.RTSU.Task\\Web.RTSU.Task.csproj",
+        "projectUniqueName": "C:\\Users\\Developer\\source\\repos\\TaskRTSU\\Web.RTSU.Task\\Web.RTSU.Task.csproj",
         "projectName": "Web.RTSU.Task",
-        "projectPath": "C:\\Users\\Tajiev Olimjon\\Desktop\\Буруллко\\Web.RTSU.Task\\Web.RTSU.Task.csproj",
-        "packagesPath": "C:\\Users\\Tajiev Olimjon\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Tajiev Olimjon\\Desktop\\Буруллко\\Web.RTSU.Task\\obj\\",
+        "projectPath": "C:\\Users\\Developer\\source\\repos\\TaskRTSU\\Web.RTSU.Task\\Web.RTSU.Task.csproj",
+        "packagesPath": "C:\\Users\\Developer\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Developer\\source\\repos\\TaskRTSU\\Web.RTSU.Task\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\Tajiev Olimjon\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Developer\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -217,8 +233,8 @@
           "net6.0": {
             "targetAlias": "net6.0",
             "projectReferences": {
-              "C:\\Users\\Tajiev Olimjon\\Desktop\\Буруллко\\Services\\Services.csproj": {
-                "projectPath": "C:\\Users\\Tajiev Olimjon\\Desktop\\Буруллко\\Services\\Services.csproj"
+              "C:\\Users\\Developer\\source\\repos\\TaskRTSU\\Services\\Services.csproj": {
+                "projectPath": "C:\\Users\\Developer\\source\\repos\\TaskRTSU\\Services\\Services.csproj"
               }
             }
           }
@@ -259,7 +275,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.401\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.402\\RuntimeIdentifierGraph.json"
         }
       }
     }
